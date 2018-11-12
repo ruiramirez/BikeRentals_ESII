@@ -14,7 +14,7 @@ public class BikeSharingMain {
         System.out.println(bRental.getDeposits());
 
         System.out.println(bRental.getUsers());
-
+        System.out.println("Ole");
 
     }
 }
