@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'TP_ESII'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'BikeSharingMain'
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'lib'}
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile fileTree(dir: 'lib', include: '*.jar')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}
