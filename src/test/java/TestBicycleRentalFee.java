@@ -29,7 +29,7 @@ public class TestBicycleRentalFee {
      * TestCase#1
      * Verifica se com o rentalProgram igual 0 (LB) se retorna 0
      */
-    // @Test
+    @Test
     public void testBicycleRentalFee1() {
         Assertions.assertEquals(0, bRental.bicycleRentalFee(0, 1, 2, 2), "Deve retornar 0.");
     }
@@ -113,7 +113,7 @@ public class TestBicycleRentalFee {
 
     /**
      * TestCase#8
-     * Verifica se o programa é executado dado que nRentals = -1 (BLB)
+     * Verifica se o método é executado dado que nRentals = -1 (BLB)
      */
     //Test
     public void testBicycleRentalFee8() {
@@ -122,6 +122,7 @@ public class TestBicycleRentalFee {
 
     /**
      * TestCase#9
+     * Verifica se o método é executado visto que recebe como argumento o endTime como negativo (-1)
      */
     //@Test
     public void testBicycleRentalFee9() {
@@ -130,6 +131,7 @@ public class TestBicycleRentalFee {
 
     /**
      * TestCase#10
+     * Verifica se o método é executado visto que recebe como argumento o initTime como negativo (-1)
      */
     //@Test
     public void testBicycleRentalFee10() {
