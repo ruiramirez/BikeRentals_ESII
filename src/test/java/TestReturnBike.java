@@ -14,13 +14,9 @@ public class TestReturnBike {
         bRental = new BikeRentalSystem(rentalFee);
         try {
             bRental.registerUser(2, "Teste", 1);
-
-
         } catch (UserAlreadyExists userAlreadyExists) {
             userAlreadyExists.printStackTrace();
         }
-
-
     }
 
     /** #TestCase1
@@ -29,7 +25,7 @@ public class TestReturnBike {
      */
 
     //@Test
-    public void returnBicycle1(){
+    public void testReturnBicycle1(){
         bRental.addBicycle(1, 1, 5);
         bRental.addCredit(2,1);
 
@@ -49,12 +45,8 @@ public class TestReturnBike {
      */
 
    //@Test
-    public void returnBicycle2(){
+    public void testReturnBicycle2(){
         bRental.addBicycle(1, 1, 5);
-
-
-
-
         Assertions.assertEquals(-1,bRental.returnBicycle(0,1,1));
     }
 
@@ -64,7 +56,7 @@ public class TestReturnBike {
      */
 
     //@Test
-    public void returnBicycle3(){
+    public void testReturnBicycle3(){
         bRental.addBicycle(1, 1, 5);
         Assertions.assertEquals(-1,bRental.returnBicycle(1,2,1));
     }
@@ -76,7 +68,7 @@ public class TestReturnBike {
      */
 
    // @Test
-    public void returnBicycle4(){
+    public void testReturnBicycle4(){
         bRental.addBicycle(1, 1, 5);
         bRental.addCredit(2,1);
 
@@ -85,17 +77,9 @@ public class TestReturnBike {
         } catch (UserDoesNotExists userDoesNotExists) {
             userDoesNotExists.printStackTrace();
         }
-
         bRental.addBicycle(1,1,6);
-
-
-
-
         Assertions.assertEquals(-1,bRental.returnBicycle(1,2,2));
     }
-
-
-
 
     //Testar os limites do endTime
 
@@ -105,7 +89,7 @@ public class TestReturnBike {
      */
 
     // @Test
-    public void returnBicycle5(){
+    public void testReturnBicycle5(){
         bRental.addBicycle(1, 1, 5);
         bRental.addCredit(2,25);
 
@@ -124,7 +108,7 @@ public class TestReturnBike {
      */
 
     //@Test
-    public void returnBicycle6(){
+    public void testReturnBicycle6(){
         bRental.addBicycle(1, 1, 5);
         bRental.addCredit(2,25);
 
@@ -137,13 +121,13 @@ public class TestReturnBike {
 
     }
 
-    /** #TestCase6
+    /** #TestCase7
      *  Tenta retornar uma bicicleta com o endTime=0;
      *  Deve retornar 1 ou seja devolveu a bicicleta ao lock 1;
      */
 
     @Test
-    public void returnBicycle7(){
+    public void testReturnBicycle7(){
         bRental.addBicycle(1, 1, 5);
         bRental.addCredit(2,25);
 
@@ -156,8 +140,8 @@ public class TestReturnBike {
 
     }
 
-   // @Test
-    public void returnBicycle8(){
+    @Test
+    public void testReturnBicycle8(){
         bRental.addBicycle(1, 1, 5);
         bRental.addCredit(2,25);
 
